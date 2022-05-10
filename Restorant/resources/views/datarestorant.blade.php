@@ -1,5 +1,5 @@
 @extends('template')
-@section('title', 'Data Mahasiswa')
+@section('title', 'Data Restoran')
 
 @section('konten')
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -29,11 +29,11 @@
                     <td>{{$resto->nama_pemesan}}</td>
                     <td>{{$resto->jumlah_pesanan}}</td>
                     <td>{{$resto->harga_total}}</td>
-                    <td>{{$resto->jadwal_reservasi}}</td>
+                    <td>{{$resto->jadwal}}</td>
                     <td>
-                        <a href="/mahasiswa/edit/{{ $mhs->nim}}">Ubah</a>
+                        <a href="/restorant/edit/{{ $resto->nama_pemesan}}">Ubah</a>
                         <!-- <a href="">Edit</a>&nbsp;&nbsp;&nbsp; -->
-                        <a style="color:red;" href="/mahasiswa/hapus/{{ $mhs->nim}}">Batalkan</a>
+                        <a style="color:red;" href="/restorant/hapus/{{ $resto->nama_pemesan}}">Batalkan</a>
                     </td>
                 </tr>
                 @endforeach

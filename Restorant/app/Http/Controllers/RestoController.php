@@ -29,7 +29,7 @@ class RestoController extends Controller
             'nama_pemesan' => $request->nama_pemesan,
             'jumlah_pesanan' => $request->jumlah_pesanan,
             'harga_total' => $request->harga_total,
-            'jadwal_reservasi' => $request->jadwal_reservasi
+            'jadwal' => $request->jadwal
         ]);
 
         return redirect('/tampildata');
@@ -47,11 +47,11 @@ class RestoController extends Controller
     public function update(Request $request)
     {
         DB::table('restorant')->where('nama_pemesan', $request->nama_pemesan)->update([
-            'jumlah_pelanggan' => $request->nama,
+            'jumlah_pelanggan' => $request->nama_pelanggan,
             'nama_pemesan' => $request->nama_pemesan,
             'jumlah_pesanan' => $request->jumlah_pesanan,
             'harga_total' => $request->harga_total,
-            'jadwal_reservasi' => $request->jadwal_reservasi
+            'jadwal' => $request->jadwal
         ]);
 
         return redirect('/tampildata');
