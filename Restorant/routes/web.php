@@ -12,7 +12,22 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
 });
+
+Route::get('/test', function () {
+    return view('test');
+});
+
+Route::get('/', function () {
+    return view('index');
+});
+
+Route::get('/tampildata', 'MahasiswaController@readdata');
+Route::get('/tambahdata','MahasiswaController@input');
+Route::post('/mahasiswa/store', 'MahasiswaController@store');
+
+Route::get('/mahasiswa/edit/{nim}', 'MahasiswaController@edit');
+Route::post('/mahasiswa/update', 'MahasiswaController@update');
+Route::get('/mahasiswa/hapus/{nim}', 'MahasiswaController@hapus');
