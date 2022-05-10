@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use app\http\controllers\RestoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,22 +13,14 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/welcome', function () {
-    return view('welcome');
-});
-
-Route::get('/test', function () {
-    return view('test');
-});
-
 Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/tampildata', 'MahasiswaController@readdata');
-Route::get('/tambahdata','MahasiswaController@input');
-Route::post('/mahasiswa/store', 'MahasiswaController@store');
+Route::get('/tampildata', 'RestoController@readdata');
+Route::get('/tambahdata','RestoController@input');
+Route::post('/restorant/store', 'RestoController@store');
 
-Route::get('/mahasiswa/edit/{nim}', 'MahasiswaController@edit');
-Route::post('/mahasiswa/update', 'MahasiswaController@update');
-Route::get('/mahasiswa/hapus/{nim}', 'MahasiswaController@hapus');
+Route::get('/restorant/edit/{nim}', 'RestoController@edit');
+Route::post('/restorant/update', 'RestoController@update');
+Route::get('/restorant/hapus/{nim}', 'RestoController@hapus');

@@ -2,14 +2,27 @@
 @section('title', 'Input Data Mahasiswa')
 
 @section('konten')
-    <form action="/mahasiswa/store" method ="post">
-        {{csrf_field()}}
-        Nama Lengkap <br>  <input type=text, name="nama", required="required"><br>
-        NIM <br> <input type=text, name="nim", required="required"><br>
-        Jurusan <br><input type=text, name="jurusan", required="required"><br>
-        Fakultas <br> <input type=text, name="fakultas", required="required"><br>
-        Universitas <br> <input type=text, name="universitas", required="required"><br>
-        <input type="submit" value="Simpan Data">
-    </form>
+
+    <div class="col-md-4 formdata text-center">
+        <form action="/restorant/store" method ="post">
+
+            <div class="mb-3">
+                <input type=text, name="nama", placeholder = "Jumlah pelanggan", required="required" size="50">
+            </div>
+            <div class="mb-3">
+                <input type=text, name="nama", placeholder = "Nama Pemesan", required="required" size="50">
+            </div>
+            <div class="mb-3">
+                <input type=text, name="nama", placeholder = "Jumlah Pesanan", required="required" size="50">
+            </div>
+            <div class="mb-3">
+                <input type=text, name="nama", placeholder = "Harga Total", required="required" size="50">
+            </div>
+            <div class="mb-3">
+                <input type=text, name="nama", placeholder = "Jadwal Reservasi", required="required" size="50">
+            </div>
+            <input type="submit" value="Pesan">
+        </form>
+    </div>
 
 @endsection

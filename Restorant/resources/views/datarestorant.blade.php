@@ -11,29 +11,29 @@
 <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
 
 <div class="container">
-    <h2> Data Mahasiswa </h2>
+    <h2> Data Reservasi Restorant </h2>
 	<div class="row">
         <div class="table-responsive">
             <table id="mytable" class="table table-bordred table-striped">
                 <thead>
-                    <th>Nama Lengkap</th>
-                    <th>NIM</th>
-                    <th>Jurusan</th>
-                    <th>Fakultas</th>
-                    <th>Universitas</th>
+                    <th>Jumlah Pelanggan</th>
+                    <th>Nama Pemesan</th>
+                    <th>Jumlah Pesanan</th>
+                    <th>Harga Total</th>
+                    <th>Jadwal Reservasi</th>
                 </thead>
             <tbody>
-                @foreach($mahasiswa as $mhs)
+                @foreach($restorant as $resto)
                 <tr>
-                    <td>{{$mhs->nama}}</td>
-                    <td>{{$mhs->nim}}</td>
-                    <td>{{$mhs->jurusan}}</td>
-                    <td>{{$mhs->fakultas}}</td>
-                    <td>{{$mhs->universitas}}</td>
+                    <td>{{$resto->jumlah_pelanggan}}</td>
+                    <td>{{$resto->nama_pemesan}}</td>
+                    <td>{{$resto->jumlah_pesanan}}</td>
+                    <td>{{$resto->harga_total}}</td>
+                    <td>{{$resto->jadwal_reservasi}}</td>
                     <td>
-                        <a href="/mahasiswa/edit/{{ $mhs->nim}}">Edit</a>
+                        <a href="/mahasiswa/edit/{{ $mhs->nim}}">Ubah</a>
                         <!-- <a href="">Edit</a>&nbsp;&nbsp;&nbsp; -->
-                        <a style="color:red;" href="/mahasiswa/hapus/{{ $mhs->nim}}">Hapus</a>
+                        <a style="color:red;" href="/mahasiswa/hapus/{{ $mhs->nim}}">Batalkan</a>
                     </td>
                 </tr>
                 @endforeach
