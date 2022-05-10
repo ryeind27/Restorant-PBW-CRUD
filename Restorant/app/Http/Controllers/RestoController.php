@@ -46,8 +46,8 @@ class RestoController extends Controller
 
     public function update(Request $request)
     {
-        DB::table('restorant')->where('nama_pemesan', $request->nama_pemesan)->update([
-            'jumlah_pelanggan' => $request->nama_pelanggan,
+        DB::table('restorant')->where('id', $request->id)->update([
+            'jumlah_pelanggan' => $request->jumlah_pelanggan,
             'nama_pemesan' => $request->nama_pemesan,
             'jumlah_pesanan' => $request->jumlah_pesanan,
             'harga_total' => $request->harga_total,
@@ -55,6 +55,7 @@ class RestoController extends Controller
         ]);
 
         return redirect('/tampildata');
+
     }
 
     public function hapus($nama_pemesan)
@@ -62,5 +63,4 @@ class RestoController extends Controller
         DB::table('restorant')->where('nama_pemesan', $nama_pemesan)->delete();
         return redirect('/tampildata');
     }
-
 }

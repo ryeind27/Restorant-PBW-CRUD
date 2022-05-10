@@ -21,6 +21,6 @@ Route::get('/tampildata', 'RestoController@readdata');
 Route::get('/tambahdata','RestoController@input');
 Route::post('/restorant/store', 'RestoController@store');
 
-Route::get('/restorant/edit/{nim}', 'RestoController@edit');
+Route::get('/restorant/edit/{nama_pemesan}', 'RestoController@edit');
 Route::post('/restorant/update', 'RestoController@update');
-Route::get('/restorant/hapus/{nim}', 'RestoController@hapus');
+Route::get('/restorant/hapus/{nama_pemesan}', 'RestoController@hapus');

@@ -1,11 +1,14 @@
 @extends('template')
-@section('title', 'Edit Data Mahasiswa')
+@section('title', 'Edit Data Restoran')
 
 @section('konten')
     @foreach($restorant as $resto)
         <div class="col-md-4 formdata text-center">
             <form action="/restorant/update" method ="post">
                 @csrf
+                <div class="mb-3">
+                    <input type=text, name="id", placeholder = "id", required="required", size="50", value="{{$resto->id}}", readonly>
+                </div>
                 <div class="mb-3">
                     <input type=text, name="jumlah_pelanggan", placeholder = "Jumlah pelanggan", required="required", size="50", value="{{$resto->jumlah_pelanggan}}">
                 </div>
