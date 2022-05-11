@@ -1,5 +1,5 @@
-@extends('template')
-@section('title', 'Edit Data Restoran')
+@extends('navbar')
+@section('Edit Data Restoran')
 
 @section('konten')
     @foreach($restorant as $resto)

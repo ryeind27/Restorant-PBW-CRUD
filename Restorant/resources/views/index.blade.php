@@ -1,4 +1,4 @@
-@extends('template')
+@extends('navbar')
 
 @section('konten')
     <image src="/images/Logo.png" width="720px" height="120px" class = "center">

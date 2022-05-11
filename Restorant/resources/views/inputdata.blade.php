@@ -1,5 +1,5 @@
-@extends('template')
-@section('title', 'Input Data Restorant')
+@extends('navbar')
+@section('Input Data Restorant')
 
 @section('konten')
 
