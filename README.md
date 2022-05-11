@@ -7,7 +7,7 @@ Restorant merupakan aplikasi untuk melakukan reservasi atau pemesanan tempat mak
 Restorant is an application for making reservations or ordering places to eat. This application has the features of creating, changing and deleting reservations. To make this feature, of course, this program use the CRUD system that was available on web development.
 
 ## About Creator 😎
-Hi👋, My name is Teuku Muhammad Roy Adrian I'm a student at syiah kuala university and this is my project for lab web-based programming final project.
+Hi👋, My name is Teuku Muhammad Roy Adrian. I'm a student at syiah kuala university and this is my project for lab web-based programming final project.
 
 # How to Use ⚙
 
